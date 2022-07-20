@@ -1,0 +1,69 @@
+.container {
+  margin: 5px auto;
+  border: 1px solid #094c8b;
+  border-radius: 9px;
+  padding: 20px;
+  background-image: url("iStock-477110708 (1).jpg");
+  background-position: center;
+  background-size: 1000px 450px;
+  background-color: #f9ead3;
+  max-width: 1000px;
+}
+
+.form-label {
+  font-family: "Anek Latin";
+  color: #ffa726;
+  margin: 4px 6px;
+}
+.form-control {
+  border: 2px solid #094c8b;
+  border-radius: 20px;
+  opacity: 65%;
+}
+.form-text {
+  margin: 7px 5px;
+  font-family: "Anek Latin";
+  font-weight: smaller;
+  color: #ffa726;
+}
+h1 {
+  font-size: 50px;
+  color: #86a4c1;
+}
+h2 {
+  color: #86a4c1;
+  font-size: 36px;
+  margin-top: 25px;
+}
+.day {
+  font-family: "Anek Latin";
+  color: #094c8b;
+
+  font-size: 18px;
+}
+.temperature {
+  font-family: "Anek Latin";
+  color: #094c8b;
+  font-size: 26px;
+  font-weight: bold;
+}
+.emoji {
+  font-size: 30px;
+}
+
+.btn {
+  background-color: #094c8b;
+  border-color: #094c8b;
+}
+.btn:hover {
+  background-color: #043058;
+}
+
+.nextDay {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(255, 143, 143) 0%,
+    rgb(255, 248, 182) 100.3%
+  );
+  border-radius: 5px;
+}
