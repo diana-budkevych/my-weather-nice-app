@@ -35,6 +35,13 @@ h2 {
   font-size: 36px;
   margin-top: 25px;
 }
+li {
+  list-style: none;
+  font-family: "Anek Latin";
+  font-size: large;
+  color: #ffa726;
+  margin: 4px 6px;
+}
 .day {
   font-family: "Anek Latin";
   color: #094c8b;
