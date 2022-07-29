@@ -35,6 +35,8 @@ function showTemperature(response) {
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
+  let windElement = document.querySelector("#wind-speed");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 function searchCity(city) {
@@ -50,6 +52,8 @@ function showCurrentTemperature(response) {
   cityElement.innerHTML = response.data.name;
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
+  let windElement = document.querySelector("#wind-speed");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 function showPosition(position) {
   let lat = position.coords.latitude;
