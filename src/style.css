@@ -31,7 +31,7 @@ h1 {
   color: #86a4c1;
 }
 h2 {
-  color: #86a4c1;
+  color: #ffa726;
   font-size: 36px;
   margin-top: 25px;
 }
@@ -86,8 +86,13 @@ li {
   font-size: 20px;
   top: -12px;
 }
-
+#open-source {
+  color: #86a4c1;
+}
+#open-source:hover {
+  color: #4681b8;
+}
 a {
   text-decoration: none;
-  color: #86a4c1;
+  color: #ffa726;
 }
