@@ -6,7 +6,7 @@ let days = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
 let day = days[now.getDay()];
 let hours = now.getHours();
@@ -33,6 +33,8 @@ searchFor.addEventListener("submit", search);
 function showTemperature(response) {
   let temperatureElement = document.querySelector("#current-temp");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
 }
 
 function searchCity(city) {
@@ -46,6 +48,8 @@ function showCurrentTemperature(response) {
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.name;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
 }
 function showPosition(position) {
   let lat = position.coords.latitude;
