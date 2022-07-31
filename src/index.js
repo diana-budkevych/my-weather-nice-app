@@ -80,18 +80,3 @@ function getCurrentLocation(event) {
 
 let showCurrentPosition = document.querySelector("#current-position");
 showCurrentPosition.addEventListener("click", getCurrentLocation);
-//function tempFahrenheit(event) {
-//event.preventDefault();
-//let showFahrenheit = document.querySelector("#current-temp");
-//showFahrenheit.innerHTML = 66;
-//}
-//let changeFahrenheit = document.querySelector("#fahr-temp");
-//changeFahrenheit.addEventListener("click", tempFahrenheit);
-
-//function tempCelsius(event) {
-//event.preventDefault();
-//let showCelsius = document.querySelector("#current-temp");
-//showCelsius.innerHTML = 18;
-//}
-//let changeCelsius = document.querySelector("#cels-temp");
-//changeCelsius.addEventListener("click", tempCelsius);

@@ -92,7 +92,8 @@ li {
 #open-source:hover {
   color: #4681b8;
 }
-a {
+.cels-temp {
+  display: inline;
   text-decoration: none;
   color: #ffa726;
 }
