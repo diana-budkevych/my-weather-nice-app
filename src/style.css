@@ -7,7 +7,7 @@
   background-position: center;
   background-size: 1000px 450px;
   background-color: #f9ead3;
-  max-width: 1000px;
+  max-width: 900px;
 }
 
 .form-label {
@@ -79,7 +79,7 @@ li {
 }
 .wrapper {
   margin: 5px auto;
-  max-width: 1000px;
+  max-width: 900px;
 }
 .units {
   position: relative;
