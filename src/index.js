@@ -20,6 +20,28 @@ if (minutes < 10) {
 let today = document.querySelector("#currentDate");
 today.innerHTML = `${day}, ${hours}:${minutes}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2" id="weather-forecast">
+            <div class="weather-forecast-day">${day}</div>
+            <img src="http://openweathermap.org/img/wn/04d@2x.png" alt="Image" width="60" id="weather-forecast-image"/>
+            <div class="weather-forecast-temperatures">
+              <span id="weather-forecast-temp-max">20° </span>
+              <span id="weather-forecast-temp-min">11°</span>
+            
+         
+      </div>
+    </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function search(event) {
   event.preventDefault();
   let showCity = document.querySelector("#cityInput");
@@ -80,3 +102,5 @@ function getCurrentLocation(event) {
 
 let showCurrentPosition = document.querySelector("#current-position");
 showCurrentPosition.addEventListener("click", getCurrentLocation);
+
+displayForecast();
