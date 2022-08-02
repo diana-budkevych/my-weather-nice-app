@@ -97,3 +97,25 @@ li {
   text-decoration: none;
   color: #ffa726;
 }
+.weather-forecast-day {
+  text-align: center;
+  font-size: 18px;
+  color: #043058;
+  margin-top: 7px;
+}
+#weather-forecast {
+  border: 1px solid #be7a0b;
+  border-radius: 9px;
+  background-color: rgb(255, 167, 38, 0.6);
+}
+#weather-forecast-image {
+  display: block;
+  margin: 0 auto;
+}
+.weather-forecast-temperatures {
+  text-align: center;
+  color: #043058;
+}
+#weather-forecast-temp-min {
+  opacity: 0.6;
+}
