@@ -20,23 +20,39 @@ if (minutes < 10) {
 let today = document.querySelector("#currentDate");
 today.innerHTML = `${day}, ${hours}:${minutes}`;
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
 function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Thu", "Fri", "Sat"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-3" id="weather-forecast">
-            <div class="weather-forecast-day">${day}</div>
-            <img src="http://openweathermap.org/img/wn/04d@2x.png" alt="Image" width="60" id="weather-forecast-image"/>
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 4) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-3" id="weather-forecast">
+            <div class="weather-forecast-day">${formatDay(forecastDay.dt)}</div>
+            <img src="http://openweathermap.org/img/wn/${
+              forecastDay.weather[0].icon
+            }@2x.png" alt="Image" width="60" id="weather-forecast-image"/>
             <div class="weather-forecast-temperatures">
-              <span id="weather-forecast-temp-max">20° </span>
-              <span id="weather-forecast-temp-min">11°</span>
+              <span id="weather-forecast-temp-max">${Math.round(
+                forecastDay.temp.max
+              )}° </span>
+              <span id="weather-forecast-temp-min">${Math.round(
+                forecastDay.temp.min
+              )}°</span>
             
          
       </div>
     </div>`;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
@@ -107,3 +123,4 @@ function getCurrentLocation(event) {
 
 let showCurrentPosition = document.querySelector("#current-position");
 showCurrentPosition.addEventListener("click", getCurrentLocation);
+searchCity("Lviv");
